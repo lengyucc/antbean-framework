@@ -16,12 +16,13 @@
 	</properties>
 	<dependencies>
 	</dependencies>
-<!-- 	<build>
+	<build>
+		<finalName>antbean-common</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-	</build> -->
+	</build>
 </project>

@@ -17,16 +17,22 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.antbean</groupId>
+			<artifactId>antbean-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.antbean</groupId>
 			<artifactId>antbean-domain</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
-<!-- 	<build>
+	<build>
+		<finalName>antbean-dal</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-	</build> -->
+	</build>
 </project>
