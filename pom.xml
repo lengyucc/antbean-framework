@@ -24,8 +24,10 @@
 		<version>1.5.4.RELEASE</version>
 		<relativePath />
 	</parent>
+
 	<properties>
-		<spring.boot.version>1.3.1.RELEASE</spring.boot.version>
+		<!-- 经测虽然使用的是1.5.4.RELEASE的Spring Boot,但要用mvn package打包成可执行jar时必须使用1.3.0.RELEASE的编译插件 -->
+		<spring.boot.mvnplus.version>1.3.0.RELEASE</spring.boot.mvnplus.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.version>0.0.1-SNAPSHOT</project.version>
@@ -78,6 +80,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring.boot.mvnplus.version}</version>
 				<configuration>
 					<mainClass>com.antbean.framework.Application</mainClass>
 					<layout>ZIP</layout>
