@@ -93,7 +93,7 @@
 						<!--可以生成不含依赖包的不可执行Jar包 -->
 						<!-- configuration> <classifier>exec</classifier> </configuration> -->
 					</execution>
-				</executions>
+				</executions> 
 			</plugin>
 		</plugins>
 	</build>
