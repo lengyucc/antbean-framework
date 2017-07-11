@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.antbean.dal.util.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://bdm253827559.my3w.com/bdm253827559_db?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull"
+                        userId="bdm253827559"
+                        password="ming1234">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.antbean.domain.entity" targetProject="../antbean-domain/src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="../antbean-dal/src/main/resources"/>
+
+        <javaClientGenerator targetPackage="tcom.antbean.dal.mapper" targetProject="../antbean-dal/src/main/java"
+                             type="XMLMAPPER"/>
+
+        <table tableName="%">
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+    </context>
+</generatorConfiguration>

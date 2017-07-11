@@ -1,0 +1,17 @@
+##server相关配置
+server:
+    port: 8989
+    contextPath: /
+
+##session相关配置
+spring:
+    session:
+        storeType: REDIS
+        timeout: 1
+    redis:
+        host: 127.0.0.1
+        port: 6379
+
+##log相关配置
+logging:
+    file: C:/mylog/log.log
