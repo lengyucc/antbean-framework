@@ -1,4 +1,4 @@
-package com.antbean.domain.request;
+package com.antbean.framework.domain.request;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;

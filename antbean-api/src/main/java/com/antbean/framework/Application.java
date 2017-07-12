@@ -7,14 +7,18 @@ import com.antbean.framework.web.filter.MyFilter;
 import com.antbean.framework.web.filter.XssFilter;
 import com.antbean.framework.web.listener.MyServletContextListener;
 import org.apache.catalina.filters.RemoteIpFilter;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 @SpringBootApplication
 @EnableRedisHttpSession
+@EnableCaching
+@MapperScan("com.antbean.framework.dal.mapper")
 public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);

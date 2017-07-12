@@ -1,4 +1,4 @@
-package com.antbean.domain.request;
+package com.antbean.framework.domain.request;
 
 /**
  * Hello world!
