@@ -135,7 +135,7 @@
 				<artifactId>mybatis-generator-maven-plugin</artifactId>
 				<version>1.3.2</version>
 				<configuration>
-					<configurationFile>${basedir}/antbean-api/src/main/resources/generator/generatorConfig.xml</configurationFile>
+					<configurationFile>${basedir}/antbean-dal/src/main/resources/generator/generatorConfig.xml</configurationFile>
 					<overwrite>true</overwrite>
 					<verbose>true</verbose>
 				</configuration>

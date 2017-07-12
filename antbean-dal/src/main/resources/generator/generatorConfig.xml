@@ -5,24 +5,28 @@
 
 <generatorConfiguration>
     <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="autoDelimitKeywords" value="true"/>
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+        	<!-- 指定生成Mapper.java所继承的父Mapper -->
             <property name="mappers" value="com.antbean.dal.util.MyMapper"/>
         </plugin>
-
+        
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://bdm253827559.my3w.com/bdm253827559_db?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull"
                         userId="bdm253827559"
                         password="ming1234">
         </jdbcConnection>
 
+		<!-- 指定实体类包名和包所在路径 -->
         <javaModelGenerator targetPackage="com.antbean.domain.entity" targetProject="../antbean-domain/src/main/java"/>
 
+		<!-- 指定Mapper.xml存放的文件夹名和所在目录 -->
         <sqlMapGenerator targetPackage="mapper" targetProject="../antbean-dal/src/main/resources"/>
-
-        <javaClientGenerator targetPackage="tcom.antbean.dal.mapper" targetProject="../antbean-dal/src/main/java"
+		<!-- 指定Mapper.java包名和包所在目录 -->
+        <javaClientGenerator targetPackage="com.antbean.dal.mapper" targetProject="../antbean-dal/src/main/java"
                              type="XMLMAPPER"/>
 
         <table tableName="%">
