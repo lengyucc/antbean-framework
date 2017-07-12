@@ -1,16 +1,28 @@
 ##server相关配置
 server:
-    port: 8989
+    port: 8089
     contextPath: /
 
-##session相关配置
 spring:
-    session:
+    session: #session配置
         storeType: REDIS
         timeout: 1
-    redis:
+    redis: #redis配置
         host: 127.0.0.1
         port: 6379
+    datasource: #数据库配置
+        url: jdbc:mysql://bdm253827559.my3w.com/bdm253827559_db?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+        username: bdm253827559
+        password: ming1234
+        driverClassName: com.mysql.jdbc.Driver
+        druid:
+            initialSize: 1
+            minIdle: 1
+            maxActive: 20
+            testOnBorrow: true
+            statViewServlet: 
+                allow: true
+        
 
 ##log相关配置
 logging:
