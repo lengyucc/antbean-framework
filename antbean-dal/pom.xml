@@ -33,6 +33,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>${spring.boot.mvnplus.version}</version>
 			</plugin>
+			<!-- 参考自: https://github.com/abel533/MyBatis-Spring-Boot http://blog.csdn.net/isea533/article/details/42102297 -->
 			<!-- mvn mybatis-generator:generate -->
 			<plugin>
 				<groupId>org.mybatis.generator</groupId>
