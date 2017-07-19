@@ -1,4 +1,4 @@
-package com.antbean.common.exception;
+package com.antbean.framework.common.exception;
 
 public class ServiceException extends RuntimeException {
 	private static final long serialVersionUID = 1L;

@@ -5,8 +5,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.catalina.AccessLog;
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -39,5 +41,13 @@ public class TestController {
 	@RequestMapping("/getsession")
 	public Object getSession(HttpServletRequest request) {
 		return request.getSession().getAttribute("time");
+	}
+	
+	@Autowired
+	ServerProperties serverProperties;
+	
+	@RequestMapping("/properties")
+	public Object properties() {
+		return serverProperties;
 	}
 }

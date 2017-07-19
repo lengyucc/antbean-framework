@@ -12,7 +12,7 @@
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
         	<!-- 指定生成Mapper.java所继承的父Mapper -->
-            <property name="mappers" value="com.antbean.dal.util.MyMapper"/>
+            <property name="mappers" value="com.antbean.framework.dal.util.MyMapper"/>
         </plugin>
         
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -22,12 +22,12 @@
         </jdbcConnection>
 
 		<!-- 指定实体类包名和包所在路径 -->
-        <javaModelGenerator targetPackage="com.antbean.domain.entity" targetProject="../antbean-domain/src/main/java"/>
+        <javaModelGenerator targetPackage="com.antbean.framework.domain.entity" targetProject="../antbean-domain/src/main/java"/>
 
 		<!-- 指定Mapper.xml存放的文件夹名和所在目录 -->
         <sqlMapGenerator targetPackage="mapper" targetProject="../antbean-dal/src/main/resources"/>
 		<!-- 指定Mapper.java包名和包所在目录 -->
-        <javaClientGenerator targetPackage="com.antbean.dal.mapper" targetProject="../antbean-dal/src/main/java"
+        <javaClientGenerator targetPackage="com.antbean.framework.dal.mapper" targetProject="../antbean-dal/src/main/java"
                              type="XMLMAPPER"/>
 
         <table tableName="%">

@@ -1,4 +1,4 @@
-package com.antbean.framework.web.filter;
+package com.antbean.framework.common.interceptor;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

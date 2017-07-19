@@ -1,8 +1,9 @@
 package com.antbean.framework.web.controller;
 
-import com.antbean.common.exception.ServiceException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.antbean.framework.common.exception.ServiceException;
 
 @RestController
 public class ExceptionController {

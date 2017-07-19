@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 
-import com.antbean.common.exception.ServiceException;
+import com.antbean.framework.common.exception.ServiceException;
 
 @RestControllerAdvice
 public class ExceptionHandlerAdvice {
